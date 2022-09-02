@@ -1,0 +1,11 @@
+name: pdf-scraping
+title:
+username:
+account: j-sauceda
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6903824
+bundleId: 6261373
+url: https://j-sauceda.shinyapps.io/pdf-scraping/
+when: 1662091413.62684
+lastSyncTime: 1662091413.62686
