@@ -1,7 +1,3 @@
-try(dev.off(dev.list()["RStudioGD"]), silent=TRUE)
-rm(list = ls())
-gc()
-
 # load libraries
 library("tidyverse")
 library("pdftools") # handles pdf files
@@ -9,17 +5,14 @@ library("plotly") # for plotting, includes choropleth maps
 library("shiny") # to create dashboards
 
 # load data
-temp_file <- tempfile() # allocates memory for a temp file
 url <- "https://hdr.undp.org/system/files/documents//hdr2020pdf.pdf"
-download.file(url, temp_file) # downloads the file into the temp_file variable
-txt <- pdf_text(temp_file) # extracts the text from the temp_file
-file.remove(temp_file) # deletes the temp_file
-rm(temp_file, url)
+txt <- pdf_text(url) # extracts the text from the temp_file
+rm(url)
 
 # txt is a char vector with an entry per page, we only keep page 2
 hdi_trends <- txt[361:364]
 # it is a long string
-# hdi_trends %>% head
+length(hdi_trends)
 tab <- str_split(hdi_trends, "\n")
 rm(hdi_trends, txt)
 
@@ -183,6 +176,14 @@ ui <- fluidPage(
                   choices = df$Country,
                   selected = 0
       ),
+      p("The data has been extracted from table 2 in the UN Human Development Report 2020 found at: ", 
+        a("https://hdr.undp.org/system/files/documents//hdr2020pdf.pdf")),
+      br(),
+      br(),
+      p("Feel free to visit me on ", 
+        a("https://www.jsauceda.info"), 
+        "or ", 
+        a("https://github.com/j-sauceda")),
     ),
     # Main panel for displaying outputs ----
     mainPanel(
