@@ -1,6 +1,8 @@
 # load libraries
-library("tidyverse")
+library("dplyr")
 library("pdftools") # handles pdf files
+library("stringr") # contains string functions
+library("tidyr") # contains gather()
 library("plotly") # for plotting, includes choropleth maps
 library("shiny") # to create dashboards
 
