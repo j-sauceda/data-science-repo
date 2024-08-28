@@ -13,9 +13,6 @@ A brief description of current projects:
 
 You may find detailed comments within each project files.
 
-Let us finish with a bit of science:
+Let us finish with a bit of science, this is a Neutron Scattering Pattern acquired during my PhD thesis:
 
-<figure>
 ![This is a Neutron Scattering Pattern acquired during my PhD thesis](https://www.jsauceda.info/images/neutron-scattering-spectrum-Cu2OSeO3.webp?height=undefined&width=420&format=webp&fit=fill "Isn't this symmetry gorgeous?")
-<figcaption>This is a Neutron Scattering Pattern acquired during my PhD thesis</figcaption>
-</figure>
